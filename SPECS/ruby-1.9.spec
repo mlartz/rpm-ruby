@@ -48,11 +48,6 @@ export CFLAGS="$RPM_OPT_FLAGS -Wall -fno-strict-aliasing"
   --without-X11 \
   --without-tk \
   --libdir=%{_libdir}
-#  --includedir=%{_includedir}/ruby \
-#  --with-sitedir='%{ruby_sitelib}' \
-#  --with-sitearchdir='%{ruby_sitearch}' \
-#  --with-vendordir='%{ruby_vendorlib}' \
-#  --with-vendorarchdir='%{ruby_vendorarch}'
 
 make %{?_smp_mflags}
 
@@ -75,11 +70,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}
 
 %changelog
-* Tue Mar 7 2011 Robert Duncan <robert@robduncan.co.uk> - 1.9.2-p180-1
-- Update prerequisites to include make
-- Update ruby version to 1.9.2-p180
-- Install /usr/share documentation
-- (Hopefully!?) platform agnostic
-
-* Sun Jan 2 2011 Ian Meyer <ianmmeyer@gmail.com> - 1.9.2-p136-1
-- Initial spec to replace system ruby with 1.9.2-p136
+* Tue Mar 7 2011 Michael L. Artz <michael.artz@redjack.com> - 1.9.2-p180-2
+- Small updates for 64-bit compatibility
+- renamed spec file
+- Copied from imeyer's repo on GitHub
